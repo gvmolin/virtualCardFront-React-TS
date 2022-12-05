@@ -1,27 +1,49 @@
 import { Card, Input, Button } from "@nextui-org/react";
 import style from "./style.module.scss";
+import ReactCardFlip from "react-card-flip";
+import { useState } from "react";
 
 export default function LoginPage (){
+  const [isFlipped, setIsFlipped] = useState(false)
+
   return(
     <div className={style.container}>
       <Card className={style.card}>
-        <div className={style.form}>
-          <div className={style.logo}>
-            <h1>Logo.</h1>
+      
+        <ReactCardFlip isFlipped={isFlipped} flipDirection="vertical">
+          <div className={style.form}>
+            <div className={style.logo}>
+              <h1>Logo.</h1>
+            </div>
+            <div className={style.content}>
+              <section>
+                <Input label="Username" className={style.formItem}></Input>
+                <Input.Password label="Password" className={style.formItem}></Input.Password>
+                <Button color="success" className={style.formItem}> Login </Button>
+                <Button onClick={() => setIsFlipped(true)} className={style.formItem}> Create account </Button>
+                <p className={style.formItem}>Forgot your password? &nbsp;<a href="">Recover password.</a></p>
+              </section>
+            </div>
           </div>
-          
-          <div className={style.content}>
-            <section>
-              <Input label="Username"></Input>
-              <Input.Password label="Password"></Input.Password>
-              <Button color="success"> Login </Button>
-            </section>
-            
-          </div>
-          
-        </div>
+
+          <div className={style.form}>
+            <div className={style.logo}>
+              <h1>Logo.</h1>
+            </div>
+            <div className={style.content}>
+              <section>
+                <Input label="Username" className={style.formItem}></Input>
+                <Input label="Email" className={style.formItem}></Input>
+                <Input.Password label="Password" className={style.formItem}></Input.Password>
+                <Input.Password label="Confirm Password" className={style.formItem}></Input.Password>
+                <Button color="success" className={style.formItem}> Create account </Button>
+                <Button onClick={() => setIsFlipped(false)} className={style.formItem}> Login page </Button>
+              </section>
+            </div>
+            </div>
+        </ReactCardFlip>
         <div className={style.secondary}>
-          secondary
+          <img src="/laptop.svg" className="logo" alt="Vite logo" />
         </div>
       </Card>
     </div>
