@@ -1,9 +1,9 @@
 import { Card, Input, Button } from "@nextui-org/react";
 import style from "./style.module.scss";
 import ReactCardFlip from "react-card-flip";
-import { useState } from "react";
+import { ReactElement, useState } from "react";
 
-export default function LoginPage (){
+export default function LoginPage ():ReactElement {
   const [isFlipped, setIsFlipped] = useState(false)
 
   return(
