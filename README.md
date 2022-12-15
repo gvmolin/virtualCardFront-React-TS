@@ -10,11 +10,17 @@
 - feat: flip animation
 - feat: create account page
 - feat: notebook svg
+- feat: toggle button animation
+- feat: toggle menu animation
+
+# Doing
+- feat: header component
+- feat: default template
+- feat: home page
 
 # To do
 - login/create account endpoints
 - login/create account form fields validation
-- Home page
 - Etc
 
 # Run

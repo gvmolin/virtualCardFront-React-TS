@@ -19,7 +19,7 @@ export default function Header(props): ReactElement {
       </header>
 
       
-        <nav className={`${isOpen ? style.nav : style.none}`}>
+        <nav className={`${isOpen ? style.nav : style.navClosed}`}>
           <h1>nav content</h1>
         </nav>
       
