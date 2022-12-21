@@ -6,6 +6,10 @@ import { ReactElement, useState } from "react";
 export default function LoginPage ():ReactElement {
   const [isFlipped, setIsFlipped] = useState(false)
 
+  function goTo(path:string):void{
+    window.location.href = path;
+  }
+
   return(
     <div className={style.container}>
       <Card className={style.card}>
@@ -19,7 +23,7 @@ export default function LoginPage ():ReactElement {
               <section>
                 <Input label="Username" className={style.formItem}></Input>
                 <Input.Password label="Password" className={style.formItem}></Input.Password>
-                <Button color="success" className={style.formItem}> Login </Button>
+                <Button color="success" className={style.formItem} onClick={() => goTo('home')}> Login </Button>
                 <Button onClick={() => setIsFlipped(true)} className={style.formItem}> Create account </Button>
                 <p className={style.formItem}>Forgot your password? &nbsp;<a href="">Recover password.</a></p>
               </section>

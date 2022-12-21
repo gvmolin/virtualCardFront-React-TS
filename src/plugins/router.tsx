@@ -5,6 +5,7 @@ import {
 } from "react-router-dom";
 import Home from "../pages/home";
 import LoginPage from "../pages/login/Index";
+import ReduxComponent from "./redux/redux";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,9 @@ const router = createBrowserRouter([
 
 export function CustomRouter ():React.ReactElement{
   return (
-    <RouterProvider router={router} />
+    <ReduxComponent>
+      <RouterProvider router={router} />
+    </ReduxComponent>
+    
   );
 }

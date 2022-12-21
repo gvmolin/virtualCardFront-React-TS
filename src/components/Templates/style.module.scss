@@ -1,0 +1,19 @@
+@import "../../utils/style/common.scss";
+
+.container{
+    
+
+    .navOpened{
+        padding: $default-padding;
+        padding-left: 16vw;
+        transition: all 0.5s;
+    }
+
+    .navClosed{
+        padding: $default-padding;
+        transition: all 0.5s;
+    }
+
+
+
+}
