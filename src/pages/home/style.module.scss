@@ -1,0 +1,30 @@
+@import "../../utils/style/common.scss";
+
+.container{
+    color: $black;
+
+    .card{
+        width: 10vw;
+        padding: $default-padding;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 10vw;
+        justify-content: center;
+        position: relative;
+        margin-right: 1vw;
+
+        .percent{
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 1vh;
+        }
+    }
+
+    .row{
+        display: flex;
+        
+        
+    }
+}

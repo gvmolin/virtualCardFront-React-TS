@@ -5,9 +5,9 @@ export const navOptions = [
     path:'/home'
   },
   {
-    title:'My templates',
+    title:'My Items',
     icon:'',
-    path:'/templates'
+    path:'/items'
   },
   {
     title:'Buy templates',

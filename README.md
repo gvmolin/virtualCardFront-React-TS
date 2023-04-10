@@ -12,8 +12,10 @@
 - feat: notebook svg
 - feat: toggle button animation
 - feat: toggle menu animation
+- feat: redux config
 
 # Doing
+- feat: dashboard
 - feat: header component
 - feat: default template
 - feat: home page
