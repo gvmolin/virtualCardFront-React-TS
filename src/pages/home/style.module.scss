@@ -1,30 +1,43 @@
 @import "../../utils/style/common.scss";
 
-.container{
-    color: $black;
+.container {
+  color: $black;
 
-    .card{
-        width: 10vw;
-        padding: $default-padding;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        height: 10vw;
-        justify-content: center;
-        position: relative;
-        margin-right: 1vw;
+  .card {
+    width: 10vw;
+    padding: $default-padding;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 10vw;
+    justify-content: center;
+    position: relative;
+    margin-right: 1vw;
+    margin-bottom: 2vh;
 
-        .percent{
-            position: absolute;
-            top: 0;
-            right: 0;
-            padding: 1vh;
-        }
+    .percent {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 1vh;
+    }
+  }
+
+  .row {
+    display: flex;
+    width: 100%;
+
+    .pieChart {
+      width: 100%;
+      height: 30vh;
     }
 
-    .row{
-        display: flex;
-        
-        
-    }
+  }
+
+  .lineChart {
+    width: 100%;
+    height: 50vh;
+  }
+
+
 }

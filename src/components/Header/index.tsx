@@ -29,17 +29,7 @@ export default function Header(props:{}): ReactElement {
         </div>
         
         <div className={style.containerTwo}>
-          <Avatar
-            icon={<FontAwesomeIcon icon={'sun'} />}
-            squared
-            className={style.themeButton}
-          />
-
-          <Avatar
-            squared
-            src="https://i.pravatar.cc/150?u=a04258114e29026702d"
-            className={style.avatar} 
-          />
+          
         </div>
         
 
@@ -49,7 +39,7 @@ export default function Header(props:{}): ReactElement {
       <nav className={`${isMenuActive ? style.nav : style.navClosed}`}>
         {
           navOptions.map((option: IOption) => (
-            <a href={option.path}>{option.title}</a>
+            <a href={option.path} key={option.title}>{option.title}</a>
           ))
         }
       </nav>

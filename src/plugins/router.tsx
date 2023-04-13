@@ -6,6 +6,7 @@ import {
 import Home from "../pages/home";
 import LoginPage from "../pages/login/Index";
 import ReduxComponent from "./redux/redux";
+import ItemsPage from "../pages/items";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
   {
     path: "/home",
     element: <Home />
+  },
+  {
+    path: "/items",
+    element: <ItemsPage/>
   },
 ]);
 

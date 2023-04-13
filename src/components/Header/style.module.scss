@@ -39,8 +39,9 @@ $default-padding-test: $default-padding;
 
 nav{
   padding: 3vw;
+  padding-bottom: 0;
   width: $nav-width;
-  height: calc(100vh - $header-height);
+  height: 100%;
   background-color: $lighter-purple;
   transition: all 0.5s ease;
   position: absolute;
