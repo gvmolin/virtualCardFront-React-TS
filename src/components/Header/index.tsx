@@ -3,14 +3,24 @@ import { Squash as Hamburger } from 'hamburger-react'
 import { navOptions, IOption } from "./navOptions";
 import style from "./style.module.scss";
 import { useDispatch } from "react-redux";
-import { toggleMenu } from "../../plugins/redux/slices/menuSlice";
+import counterSlice, { toggleMenu, selectedMenuItem, selectCount } from "../../plugins/redux/slices/menuSlice";
 import { useSelector } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Avatar, Container } from "@nextui-org/react";
 
 export default function Header(props:{}): ReactElement {
   const dispatch = useDispatch()
+  const indexRedux = useSelector((state:any)=> state.menu.index);
   const isMenuActive = useSelector((state :any) => state.menu.active);
+
+  function onClickTeste(index:number){
+    dispatch(selectedMenuItem({payload:index, type: "menu/selectedMenuItem"}))
+  }
+
+  function onClickTesteGet(){
+    
+    console.log(indexRedux)
+  }
 
   return (
     <>
@@ -24,6 +34,8 @@ export default function Header(props:{}): ReactElement {
             />
           </div>
 
+          {/* <button onClick={onClickTeste}>teste</button> */}
+          {/* <button onClick={onClickTesteGet}>teste get</button> */}
           <h1>Logo.</h1>
 
         </div>
