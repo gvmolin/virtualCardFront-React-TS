@@ -13,16 +13,21 @@
 - feat: toggle button animation
 - feat: toggle menu animation
 - feat: redux config
+- feat: default template
+- feat: header component
 
 # Doing
 - feat: dashboard
-- feat: header component
-- feat: default template
 - feat: home page
+- feat: itens page
+- feat: itens form
+- feat: productCard component
+
 
 # To do
 - login/create account endpoints
 - login/create account form fields validation
+- fix: main template container size when the menu is open
 - Etc
 
 # Run
