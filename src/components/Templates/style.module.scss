@@ -1,8 +1,6 @@
 @import "../../utils/style/common.scss";
 
 .container{
-    
-
     .navOpened{
         padding: $default-padding;
         padding-left: 17vw;
@@ -14,6 +12,10 @@
         transition: all 0.5s;
     }
 
+    .body{
+        height: calc(100vh - $header-height);
+        overflow-y: scroll;
+    }
 
 
 }

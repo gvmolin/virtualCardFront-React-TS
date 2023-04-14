@@ -61,9 +61,8 @@ const COLORS = ['#495579', '#263159', '#251749', 'rgb(25, 25, 25)'];
 
 export default function Home() {
   return (
-    <MainTemplate>
+    <MainTemplate title="Dashboard">
       <div className={style.container}>
-        <h1 className={style.title}>Dashboard</h1>
 
         <div className={style.row}>
           <Card variant="flat" className={style.card}>
