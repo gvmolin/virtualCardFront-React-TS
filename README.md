@@ -20,7 +20,7 @@
 - feat: dashboard
 - feat: home page
 - feat: itens page
-- feat: itens form
+- feat: itens for
 - feat: productCard component
 
 
@@ -28,6 +28,7 @@
 - login/create account endpoints
 - login/create account form fields validation
 - fix: main template container size when the menu is open
+- fix: menu selected item color
 - Etc
 
 # Run
