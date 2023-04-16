@@ -1,0 +1,13 @@
+@import "../../utils/style/common.scss";
+
+.container{
+    .content{
+        height: 90%;
+        padding: 1vh 1vw;
+    }
+
+    .label{
+        background-color: $transp-lighter-purple;
+        padding: 1vh 1vw;
+    }
+}

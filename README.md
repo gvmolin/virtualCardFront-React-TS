@@ -25,6 +25,7 @@
 
 
 # To do
+- axios config
 - login/create account endpoints
 - login/create account form fields validation
 - fix: main template container size when the menu is open
