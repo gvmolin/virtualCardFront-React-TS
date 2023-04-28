@@ -3,7 +3,7 @@ import { Card, Button, Modal, Input } from "@nextui-org/react"
 import style from "./style.module.scss"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { ProductCard } from "../../components/ProductCard"
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { UploadInputComponent } from "../../components/UploadInput"
 import { client } from "../../plugins/axios"
 
@@ -11,10 +11,11 @@ export default function ItemsPage(){
     //DATA
     const [visible, setVisible] = useState<boolean>(false);
     const [valid, setValid] = useState<boolean>(false);
+    const [produtos, setProdutos] = useState<any[]|null>([]);
 
     //FORM
     const [nome, setNome] = useState<string>(" ");
-    const [file, setFile] = useState<File[]|null>(null)
+    const [file, setFile] = useState<File[]|null>(null);
     // const [valorCompra, setValorCompra] = useState<string>(" ");
     // const [valorVenda, setValorVenda] = useState<string>(" ");
     
@@ -31,7 +32,20 @@ export default function ItemsPage(){
     };
 
     async function getItems(){
-        await client.get("/produto").then(res => console.log(res));
+        try {
+            await client.get("/produto").then(res => {
+                console.log(res.data)
+                const arr = res.data;
+                setProdutos(arr.data)
+                
+                return true;
+            }).then(res => {
+                console.log(produtos)
+            });
+        } catch (error) {
+            
+        }
+        
     }
 
     async function createItem(){
@@ -85,8 +99,15 @@ export default function ItemsPage(){
     }
 
     useEffect(()=>{
-        getItems()
+        getItems();
+        console.log("render")
     }, [])
+
+    useEffect(()=>{
+        console.log("here")
+        console.log(produtos)
+        
+    }, [produtos?.length])
 
     //TEMPLATE
     return(
@@ -94,10 +115,11 @@ export default function ItemsPage(){
             <MainTemplate title="Catálogo">
                 <div className={style.container}>
                     <Card variant="flat" className={style.buttonCard}><button onClick={openForm}><FontAwesomeIcon icon={'plus'}/></button></Card>
-                    <ProductCard label="Label"> </ProductCard>
+                    { 
+                        produtos && produtos.map(produto => <ProductCard label={produto.nome} src={produto.id} key={produto.id}> </ProductCard>)
+                    }
                 </div>
             </MainTemplate>
-
             <Modal
                 closeButton
                 open={visible}
