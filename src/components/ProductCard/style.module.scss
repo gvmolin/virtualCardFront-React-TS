@@ -1,13 +1,49 @@
 @import "../../utils/style/common.scss";
 
 .container{
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    z-index: 9999;
+    transition: all .2s ease-in-out;
+    &:hover{
+        cursor: pointer;
+        transform: scale(1.02); 
+        // filter: blur(-0.1px);
+        
+    }
     .content{
-        height: 90%;
-        padding: 1vh 1vw;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        display: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .label{
+        bottom: 0;
+        z-index: 999999;
         background-color: $transp-lighter-purple;
         padding: 1vh 1vw;
+        color: white;
+        
+    }
+
+    .controls{
+        cursor: pointer;
+        z-index: 99999999999999;
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        padding: 1vh 1vw;
+
+        .controlButton{
+            width: 1vw;
+        }
+
     }
 }
